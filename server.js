@@ -5,8 +5,15 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.set('views','./views');
+app.set('view engine','ejs');
+
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 app.get('/', (req, res) => {
-    res.send('UNDER CONSTRUCTION');
+    res.render('index', {});
 });
 
 app.get('/about', (req, res) => {
