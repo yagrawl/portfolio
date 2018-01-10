@@ -1,0 +1,99 @@
+<html>
+    <head>
+
+        <title>Yash Agrawal</title>
+
+        <!-- SEO and mobile format declarations -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Resume Builder">
+        <meta name="keywords" content="">
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="../img/webicon.png" />
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="../css/main.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="no-overflow">
+            <div class="content">
+                <div class="header">
+                    <a href="/"><p><strong>YASH</strong> AGRAWAL</a>
+                        <span class="links"><a href="/about">About</a></span>
+                        <span class="links"><a href="#work"> Work</a></span>
+                    </p>
+                </div>
+            <div class="experience">
+                <p class="title">EXPERIENCE</p>
+                <div class="company">
+                    <div class="company-left">
+                        <img src="../img/braintree.png" width="200px">
+                        <p class="time">Summer 2018</p>
+                    </div>
+                    <div class="timeline">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="300px" viewBox="0 0 50 300" version="1.1" class="discover-line">
+                        <defs>
+                            <polygon id="path-1" points="33.86 34 33.86 0.14 0 0.14 0 34"></polygon>
+                            <polygon id="path-3" points="33.86 34 33.86 0.14 0 0.14 0 34"></polygon>
+                        </defs>
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Line">
+                                <path d="M39,0 C39,39.227 15,39.227 15,78.456 C15,117.684 39,117.684 39,156.911 C39,196.138 15,196.138 15,235.363 C15,274.593 39,274.593 39,313.819 C39,353.049 15,353.049 15,392.277 C15,431.507 39,431.507 39,470.739 C39,509.971 15,509.971 15,549.201" id="template" stroke="#A6A6A6" stroke-width="2" stroke-linecap="round" stroke-dashoffset="300" stroke-dasharray="0,8"></path>
+                                <path d="M39,0 C39,39.227 15,39.227 15,78.456 C15,117.684 39,117.684 39,156.911 C39,196.138 15,196.138 15,235.363 C15,274.593 39,274.593 39,313.819 C39,353.049 15,353.049 15,392.277 C15,431.507 39,431.507 39,470.739 C39,509.971 15,509.971 15,549.201" id="dotted-line" stroke="#787878" stroke-width="2" stroke-dasharray="0,8" style="stroke-dasharray: 320px; stroke-dashoffset: 320px; stroke: #787878;"></path>
+                            </g>
+                        </g>
+                        </svg>
+                    </div>
+                    <div class="company-right">
+                        <img src="../img/mastercard.png" width="200px">
+                        <p class="time">Summer 2017</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div>
+            </div>
+            <footer class="footer">
+                <hr>
+                <p>&copy; Yash Agrawal
+                    <span class="social">
+                        <i class="fa fa-2x fa-facebook" aria-hidden="true"></i>
+                        <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+                        <i class="fa fa-2x fa-instagram" aria-hidden="true"></i>
+                        <i class="fa fa-2x fa-medium" aria-hidden="true"></i>
+                        <i class="fa fa-2x fa-linkedin" aria-hidden="true"></i>
+                    </span>
+                </p>
+            </footer>
+
+            <script>
+                var position = 0;
+                var ticking = false;
+                window.addEventListener('scroll', function(e) {
+                    position = window.scrollY;
+                    if (!ticking) {
+                        window.requestAnimationFrame(function() {
+                          moveTimeline(position);
+                          ticking = false;
+                        });
+                        ticking = true;
+                    }
+                });
+            </script>
+
+            <!--jQuery -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="../js/script.js"></script>
+
+            <!--Font Awesome -->
+            <script src="https://use.fontawesome.com/8c86fcede2.js"></script>
+
+            <!--JavaScript Bootstrap -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        </div>
+    </body>
+</html>

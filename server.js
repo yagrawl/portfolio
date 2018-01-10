@@ -20,6 +20,10 @@ app.get('/about', (req, res) => {
     res.send('About');
 });
 
+app.get('/work', (req, res) => {
+    res.render('work', {});
+});
+
 app.get('/project/:name', (req, res) => {
     var name = req.params.name;
     res.send(name);

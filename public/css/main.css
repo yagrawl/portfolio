@@ -1,18 +1,21 @@
+/* Importing Fonts
+     Proxima Nova : 100 200 300 400
+*/
 @font-face {
     font-family: Proxima Nova;
-    src: url(fonts/ProximaNovaThin.otf);
+    src: url('fonts/ProximaNovaThin.otf');
     font-weight: 100;
 }
 
 @font-face {
     font-family: Proxima Nova;
-    src: url(fonts/ProximaNovaAltRegular.otf);
+    src: url('fonts/ProximaNovaAltRegular.otf');
     font-weight: 200;
 }
 
 @font-face {
     font-family: Proxima Nova;
-    src: url(fonts/ProximaSemibold.otf);
+    src: url('fonts/ProximaSemibold.otf');
     font-weight: 300;
 }
 
@@ -22,25 +25,174 @@
     font-weight: 400;
 }
 
+/* Preventing overflow on phone */
 .no-overflow {
     overflow-x: hidden !important;
 }
 
+.content {
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+/* Header
+     p : main-name header
+     span : links - Work About
+*/
+.header {
+    height: 80px;
+}
+
+.header > p {
+    font-family: Proxima Nova;
+    font-size: 20px;
+    font-weight: 100;
+    color: #282C34;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+span.links {
+    float: right;
+    margin-right: 30px;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+/* Anchor tag styling + animation */
+.anchor {
+    color: #282C34;
+    text-decoration: none !important;
+}
+
+.anchor:hover {
+    animation: uline 0.10s linear 1 forwards;
+    -webkit-animation: uline 0.10s linear 1 forwards;
+    -moz-animation: uline 0.10s linear 1 forwards;
+    -o-animation: uline 0.10s linear 1 forwards;
+}
+
+@keyframes uline {
+    0% {border-bottom: 0.5px solid #FF595C;}
+    50% {border-bottom: 1px solid #FF595C;}
+    75% {border-bottom: 1.5px solid #FF595C;}
+    100% {border-bottom: 2px solid #FF595C;}
+}
+
+@-webkit-keyframes uline {
+    0% {border-bottom: 0.5px solid #FF595C;}
+    50% {border-bottom: 1px solid #FF595C;}
+    75% {border-bottom: 1.5px solid #FF595C;}
+    100% {border-bottom: 2px solid #FF595C;}
+}
+
+@-moz-keyframes uline {
+    0% {border-bottom: 0.5px solid #FF595C;}
+    50% {border-bottom: 1px solid #FF595C;}
+    75% {border-bottom: 1.5px solid #FF595C;}
+    100% {border-bottom: 2px solid #FF595C;}
+}
+
+@-o-keyframes uline {
+    0% {border-bottom: 0.5px solid #FF595C;}
+    50% {border-bottom: 1px solid #FF595C;}
+    75% {border-bottom: 1.5px solid #FF595C;}
+    100% {border-bottom: 2px solid #FF595C;}
+}
+
+/* Intro Text */
+
+.intro {
+    font-family: Proxima Nova;
+    font-size: 20px;
+    font-weight: 100;
+    color: #282C34;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 50px;
+}
+
+.intro > a.bottom {
+    border-bottom: 0.5px solid #8F8F8F;
+}
+
+.title {
+    font-family: Proxima Nova;
+    font-size: 20px;
+    font-weight: 100;
+    color: #282C34;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.experience {
+    width: 100%;
+}
+
+.company {
+    height: 300px;
+}
+
+.company-left {
+    float: left;
+    width: 35%;
+    margin-left: 10%;
+    margin-top: 50px;
+}
+
+.company-right {
+    float: left;
+    width: 45%;
+    margin-top: 150px;
+}
+
+.timeline {
+    float: left;
+    width: 10%;
+}
+
+.time {
+    font-family: Proxima Nova;
+    font-size: 20px;
+    font-weight: 100;
+    color: #282C34;
+}
+
+/* Footer
+     span.social : font-awesome
+     i : font-spacing for social
+*/
 .footer {
-    height: 50px;
     position: fixed;
+    height: 60px;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #282C34;
-    text-align: center;
+    margin-bottom: 20px;
 }
 
 .footer > p {
     font-family: Proxima Nova;
     font-size: 16px;
     font-weight: 100;
-    color: white;
+    color: #8F8F8F;
+    margin-left: 30px;
     margin-top: 10px;
-    text-align: center;
+    margin-bottom: 10px;
+}
+
+span.social {
+    float: right;
+    margin-right: 30px;
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+i {
+    color: #8F8F8F;
+    margin-right: 8px;
+}
+
+i:hover {
+    color: #FF595C;
 }

@@ -1,7 +1,7 @@
 <html>
     <head>
 
-        <title>Runistics</title>
+        <title>Yash Agrawal</title>
 
         <!-- SEO and mobile format declarations -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,48 @@
     </head>
     <body>
         <div class="no-overflow">
-            <footer class="footer"><p>&copy; Yash Agrawal</p></footer>
+            <div class="content">
+                <div class="header">
+                    <a class="anchor" href="/"><p><strong>YASH</strong> AGRAWAL</a>
+                        <span class="links"><a class="anchor" href="/about">About</a></span>
+                        <span class="links"><a class="anchor" href="/work"> Work</a></span>
+                    </p>
+                </div>
+                <p class="intro">Hi, I'm Yash.
+                    I'm an ECE major at the University of Illinois at Urbana-Champaign.
+                    I will be working at <a class="anchor" href="https://www.braintreepayments.com/">Braintree</a> as a software engineering
+                    intern during summer 2018. I'm interested in Full-Stack web development, Human Computer Interaction and Design.
+                    Take a look at my <a class="bottom anchor" href="http://resume.yagrawal.com">résumé</a>.
+                </p>
+
+                <footer class="footer">
+                    <hr>
+                    <p>&copy; Yash Agrawal
+                        <span class="social">
+                            <a href="https://facebook.com/yagrawl"><i class="fa fa-2x fa-facebook" aria-hidden="true"></i></a>
+                            <a href="https://github.com/yagrawl"><i class="fa fa-2x fa-github" aria-hidden="true"></i></a>
+                            <a href="https://instagram.com/yagrawl"><i class="fa fa-2x fa-instagram" aria-hidden="true"></i></a>
+                            <a href="https://medium.com/@yagrawl"><i class="fa fa-2x fa-medium" aria-hidden="true"></i></a>
+                            <a href="https://linkedin.com/in/yagrawl"><i class="fa fa-2x fa-linkedin" aria-hidden="true"></i></a>
+                        </span>
+                    </p>
+                </footer>
+            </div>
+
+            <script>
+                var position = 0;
+                var ticking = false;
+                window.addEventListener('scroll', function(e) {
+                    position = window.scrollY;
+                    if (!ticking) {
+                        window.requestAnimationFrame(function() {
+                          moveTimeline(position);
+                          ticking = false;
+                        });
+                        ticking = true;
+                    }
+                });
+            </script>
 
             <!--jQuery -->
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
