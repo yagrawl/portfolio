@@ -1,3 +1,4 @@
+<!doctype html>
 <html>
     <head>
 
@@ -47,21 +48,6 @@
                     </p>
                 </footer>
             </div>
-
-            <script>
-                var position = 0;
-                var ticking = false;
-                window.addEventListener('scroll', function(e) {
-                    position = window.scrollY;
-                    if (!ticking) {
-                        window.requestAnimationFrame(function() {
-                          moveTimeline(position);
-                          ticking = false;
-                        });
-                        ticking = true;
-                    }
-                });
-            </script>
 
             <!--jQuery -->
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

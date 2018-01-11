@@ -120,9 +120,8 @@ span.links {
     font-family: Proxima Nova;
     font-size: 20px;
     font-weight: 100;
-    color: #282C34;
-    margin-left: 60px;
-    margin-right: 60px;
+    color: #EC4A2C;
+    margin-left: 35px;
 }
 
 .experience {
@@ -135,14 +134,15 @@ span.links {
 
 .company-left {
     float: left;
-    width: 35%;
-    margin-left: 10%;
+    width: 30%;
+    margin-left: 15%;
     margin-top: 50px;
 }
 
 .company-right {
     float: left;
-    width: 45%;
+    width: 30%;
+    margin-right: 15%;
     margin-top: 150px;
 }
 
@@ -152,11 +152,158 @@ span.links {
 }
 
 .time {
+    margin-top: 8px;
     font-family: Proxima Nova;
-    font-size: 20px;
+    font-size: 12px;
     font-weight: 100;
     color: #282C34;
 }
+
+.clear {
+    clear: both;
+}
+
+@media screen and (max-width: 700px) {
+    .company-left {
+        width: 100%;
+        margin-left: 20%;
+        margin-top: 50px;
+    }
+
+    .company-right {
+        width: 100%;
+        margin-left: 20%;
+        margin-top: 50px;
+    }
+
+    .timeline {
+        display: none;
+    }
+}
+
+.experience-image-img {
+    max-width: 250px;
+    margin-left: 30px;
+}
+
+.projects {
+    margin-top: 50px;
+    width: 100%;
+}
+
+.project-title {
+    font-family: 'Proxima Nova';
+    font-size: 24px;
+    font-weight: 100;
+    color: #EC4A2C;
+}
+
+.project-description {
+    font-family: 'Proxima Nova';
+    font-size: 18px;
+    font-weight: 100;
+    color: #1F1F1F;
+    width: 250px;
+}
+
+.after-box {
+    clear: left;
+    margin-bottom: 50px;
+}
+
+.selected-projects {
+    margin: 50px auto;
+}
+
+.selected-project {
+    float: left;
+    width: 50%;
+}
+
+.description {
+    float: left;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+@media screen and (max-width: 730px) and (min-width: 405px){
+    .selected-project {
+        float: left;
+        width: 300px;
+        margin-left: 30px;
+    }
+
+    .project-2 {
+        margin-top: 0px;
+    }
+
+    .description {
+        float: left;
+        margin-top: 20px;
+        margin-left: 30px;
+    }
+}
+
+@media screen and (max-width: 404px){
+    .selected-project {
+        float: left;
+        width: 300px;
+        margin-left: 30px;
+    }
+
+    .project-2 {
+        margin-top: 20px;
+    }
+
+    .description {
+        float: left;
+        margin-top: 20px;
+        margin-left: 30px;
+    }
+}
+
+.selected-project > img {
+    width: 250px;
+    margin-left: 30px;
+}
+
+.selected-project > p {
+    width: 270px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.cropper {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/* on hover shadow */
+.shadow {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    transition: box-shadow 0.3s ease-in-out;
+    -webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* IE 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+    -webkit-filter: saturate(100%); /* Safari 6.0 - 9.0 */
+    filter: saturate(100%);
+}
+
+/* Transition to a bigger shadow on hover */
+.shadow:hover {
+    box-shadow: 0 15px 15px rgba(0,0,0,0.3);
+    -webkit-transform:scale(1.02); /* Safari and Chrome */
+    -moz-transform:scale(1.02); /* Firefox */
+    -ms-transform:scale(1.02); /* IE 9 */
+    -o-transform:scale(1.02); /* Opera */
+    transform:scale(1.02);
+    -webkit-filter: saturate(0%);
+    filter: saturate(0%);
+}
+
 
 /* Footer
      span.social : font-awesome
@@ -171,7 +318,15 @@ span.links {
     margin-bottom: 20px;
 }
 
-.footer > p {
+.footerX {
+    height: 60px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.footer > p, .footerX > p {
     font-family: Proxima Nova;
     font-size: 16px;
     font-weight: 100;
