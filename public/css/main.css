@@ -30,6 +30,10 @@
     overflow-x: hidden !important;
 }
 
+a {
+    text-decoration: none !important;
+}
+
 .content {
     max-width: 900px;
     margin: 30px auto;
@@ -304,7 +308,96 @@ span.links {
     filter: saturate(0%);
 }
 
+.more-projects {
+    margin: 50px auto;
+}
 
+.more-project {
+    float: left;
+    width: 50%;
+}
+
+.more-project-img {
+    display: inline-block;
+    width: 40px;
+    margin-left: 30px;
+}
+
+.more-project-title {
+    display: inline-block;
+    font-family: 'Proxima Nova';
+    font-size: 24px;
+    font-weight: 200;
+    color: #1F1F1F;
+}
+
+.more-project-description {
+    font-family: 'Proxima Nova';
+    font-size: 18px;
+    font-weight: 100;
+    color: #1F1F1F;
+    width: 270px;
+    margin-left: 30px;
+}
+
+@media screen and (max-width: 730px) and (min-width: 405px){
+    .more-project {
+        float: left;
+        width: 300px;
+    }
+
+}
+
+@media screen and (max-width: 404px){
+    .more-project {
+        float: left;
+        width: 100%;
+        margin-left: 50px;
+    }
+
+    .project-2 {
+        margin-top: 50px;
+    }
+
+    .more-project-img {
+        display: inline-block;
+        width: 40px;
+        margin-left: 10px;
+    }
+
+    .more-project-description {
+        font-family: 'Proxima Nova';
+        font-size: 18px;
+        font-weight: 100;
+        color: #1F1F1F;
+        width: 220px;
+        margin-left: 10px;
+    }
+}
+
+.blog {
+    width: 600px;
+    margin: 20px auto;
+}
+
+.blog-list {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 730px) and (min-width: 405px){
+    .blog {
+        width: 400px;
+        margin: 20px auto;
+    }
+}
+
+@media screen and (max-width: 404px){
+    .blog {
+        width: 300px;
+        margin: 20px auto;
+    }
+}
 /* Footer
      span.social : font-awesome
      i : font-spacing for social
