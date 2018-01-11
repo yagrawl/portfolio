@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/about', (req, res) => {
-    res.send('About');
+    res.render('about', {});
 });
 
 app.get('/work', (req, res) => {
@@ -26,7 +26,7 @@ app.get('/work', (req, res) => {
 
 app.get('/project/:name', (req, res) => {
     var name = req.params.name;
-    res.send(name);
+    res.render('project/' + name, {});
 });
 
 app.listen(PORT, () => {
