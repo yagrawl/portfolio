@@ -84,6 +84,10 @@ p, ul, li, .article {
     margin: 30px auto;
 }
 
+.left-img {
+    float: right;
+}
+
 .divider {
     height: 25px;
 }
