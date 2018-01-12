@@ -68,6 +68,29 @@
                     and suffered a terrible case of Runner's Knee. Now, I decided that the competition would be with a target. For example, 500 kms a year is a decent target. I now wanted to pivot the app based on the target. Strava has a great public API so I decided to use that. I used NodeJs with a
                     mongoDB database, Express and the frontend was written in EJS. The finished product looks something like this.
                 </p>
+                <img class="img-responsive screenshot" src="../img/project/runistics/final1.png">
+                <p class="article">Initially after going through the entire process of authorization and getting a token from Strava, I wanted to get some running data right out the bat with the same API call so I used a promise and generated the basic landing screen.
+                The details button gets all the run data after 1st Jan 2018 UNIX epoch time. I used chartjs to create line graphs of speeds and runs. There's a progress bar which would be filled up at 500 kms. Now since the basic app was done, I still had another problem with getting the runs into strava in the first place.
+                It still doesn't record treadmill runs like Nike+ does and manual input is a chore. There had to be a better way.</p>
+                <div class="divider"></div>
+                <p class="section-title">Challenges</p>
+                <p class="article">Getting runs into strava automatically was indeed a challenge because Nike+ has such a closed system. Sure there are a couple of websites that help with run transfers at a minimal charge but at times even they didn't work. I ended up adding another additional login page. </p>
+                <img class="img-responsive screenshot" src="../img/project/runistics/final2.png">
+                <p class="article">I plan use a headless browser, log in to Nike+ with the credentials and scrape all the runs and use the Strava post API to add these activities and create graphs. Or I could remove Strava out all together and just use the scraping to get all the data. There are more challenges because I can't just store log in information
+                    in plain text. I'll need to encrypt it. Work in progress.</p>
+                <div class="divider"></div>
+                <p class="section-title">Try it out</p>
+                <p class="article"><a target="_blank" class="anchor" href="https://runistics.herokuapp.com">Runistics</a></p>
+                <div class="divider"></div>
+                <p class="section-title">More Projects</p>
+                <p class="project-index">
+                    <a class="anchor" href="/project/musify">Musify</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;
+                    <a class="anchor" href="/project/moviebot">Moviebot</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;
+                    <a class="anchor" href="/project/homograph">IDN Homograph Detector</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;
+                    <a class="anchor" href="/project/task">Task.</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;
+                    <a class="anchor" href="/project/leapflix">Leapflix</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;
+                    <a class="anchor" href="/project/broker">Broker</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;
+                </p>
                 <div class="bot"></div>
             </div>
                 <footer class="footerX">
