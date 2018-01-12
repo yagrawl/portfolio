@@ -1,0 +1,74 @@
+/* Importing Fonts
+     Proxima Nova : 100 200 300 400
+*/
+@font-face {
+    font-family: Proxima Nova;
+    src: url('fonts/ProximaNovaThin.otf');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: Proxima Nova;
+    src: url('fonts/ProximaNovaAltRegular.otf');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: Proxima Nova;
+    src: url('fonts/ProximaSemibold.otf');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Proxima Nova;
+    src: url('fonts/Proxima Nova Semibold.otf');
+    font-weight: 400;
+}
+
+.project-title {
+    font-family: Proxima Nova;
+    font-size: 36px;
+    font-weight: 100;
+    color: #282C34;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.project-subtitle {
+    font-family: Proxima Nova;
+    font-size: 16px;
+    font-weight: 100;
+    color: #B6B6B6;
+    margin-left: 30px;
+    margin-top: -10px;
+}
+
+.section-title {
+    font-family: Proxima Nova;
+    font-size: 24px;
+    font-weight: 300;
+    color: #B6B6B6;
+    margin-left: 30px;
+}
+
+p, ul, li, .article {
+    font-family: Proxima Nova;
+    font-size: 18px;
+    font-weight: 100;
+    color: #282C34;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.background {
+    width: 900px;
+    margin: 10px auto;
+}
+
+.divider {
+    height: 25px;
+}
+
+.bot {
+    margin-bottom: 100px;
+}
