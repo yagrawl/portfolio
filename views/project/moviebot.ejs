@@ -34,7 +34,132 @@
             </div>
             <img class="background img-responsive" src="../img/project/moviebot/background.png">
             <div class="content">
+                <p class="section-title">Inspiration</p>
+                <p class="article">I love watching movies. I have watched most of the IMDb top 250 and many of the popular ones so it becomes really hard to find a new movie to watch. I hate to waste my time on an uninteresing movie and also despise trying to search for a good movie to watch so I thought of making something that would solve the problem. Well, a couple of months ago, Facebook released the messenger platform and I thougt it was really cool that we could just communicate with a bot. I thought I would give this interface a try.</p>
+                <div class="divider"></div>
+                <p class="section-title">Setup</p>
+                <div>
+                    <p style="float: left;"><img src="../img/project/moviebot/StartBot.png" width="270px"></p>
+                    <p class="article">I began with the basics. Making a Facebook page, setting up webhooks, etc by simply following the documentation. Now I had a functioning but useless bot that returned back whatever was sent. That's it! I apparently started this on June 20th, 2016. So facebook requires all its communications with the messenger bot be done over a secure network. The easiest way to set that up was using nodeJs hosted on heroku.</p>
+                    <div class="clear"></div>
+                </div>
+                <p class="article">Having had no prior experience in JavaScript it all came down to figuring out how things actually worked. I started working with the documentation and tried to sent hard-coded image links and templates to make sure I actually knew how it was working. After trying, testing and reading, I finally figured out how to use all the basic tricks to send messages and templates. Now I had to actually have it send movie information using TMDb API. That took me a few days because I had never used an API before this. After a lot of trial and error I suddenly had a movie name that wasn't hardcoded, sent from the bot.
+                </p>
+                <div class="divider"></div>
+                <p class="section-title">Implementation</p>
+                <div>
+                    <img src="../img/project/moviebot/HiStart.png" style="float:right; margin-left: 10px; margin-right:30px;margin-top:20px;" width="225px">
+                    <p class="article">Now I could actually begin using the bot. I was using random numbers to create random movieIDs to get informtion from the API. That was not a good way to work through the API because most of the times the API wouldn't return anything and when it did, it was a weird movie from the 1940s. That was a small hurdle though. I was using <code>Math.floor((Math.random() * 1000) + 1)</code>, then I just changed to a populat movies API and kept using random numbers.I then implemented Random movies, Genre based search and the movies playing in theatres. All these were handled by postbacks instead of by user commands. I made sure I had a certain flow to the bot so that it would invite minimum interaction with the user's actual input. I didn't have any NLP capabilities added to the bot and if the input wasn't in the switch statements I was using, it would fail.
+                    </p>
+                    <div class="clear"></div>
+                </div>
+                <div class="img-div"></div>
+                <div>
+                    <p style="float: left;"><img src="../img/project/moviebot/help.png" width="200px"></p>
+                    <p class="article">I was essentially working on a bunch of if-else and switch statements. For example, If the user input 'Hi' or, 'Hey' my bot would return 'Hey!' but if someone were to say 'Hii', my bot would crash! I didn't actually figure this out until I gave this to a friend of mine to try. I tried a 'Help desk' that would be returned if the input wasn't a predefined statement. Now that I look at it with fresh eyes, the 'Help Desk' message I used was clunky, intimidating and maybe useless. However, at this point I had the basic functionality </p>
+                    <div class="clear"></div>
+                </div>
+                <div class="divider"></div>
+                <p class="section-title">Progress</p>
+                <div class="row">
+                    <div class="col-md-1 col-xs-1">
+                    </div>
+                    <div class="col-md-10 col-xs-10">
+                        <div class="col-md-3 col-sm-6 col-xs-6">
+                            <img src="../img/project/moviebot/Movie1.png" class="img-responsive" width="300px"><img>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-6">
+                            <img src="../img/project/moviebot/Movie2.png" class="img-responsive" width="300px"><img>
+                        </div>
+                        <div class="clearfix visible-sm"></div>
+                        <div class="clearfix visible-xs"></div>
+                        <div class="col-md-3 col-sm-6 col-xs-6">
+                            <img src="../img/project/moviebot/Antman.png" class="img-responsive" width="300px"><img>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-6">
+                            <img src="../img/project/moviebot/Movie4.png" class="img-responsive" width="300px"><img>
+                        </div>
+                    </div>
+                    <div class="col-md-1 col-xs-1">
+                    </div>
+                </div>
+                <div class="img-div"></div>
+                <p class="article">
+                    The 'Genre Based' search however was horrible. It was a giant clunky list of major genres. It was annoying to look at and difficult to select from but that's all I knew at that moment.
+                </p>
+                <div class="row">
+                    <div class="col-md-1 col-xs-1">
+                    </div>
+                    <div class="col-md-10 col-xs-10">
+                        <div class="col-md-4 col-xs-4 ">
+                            <img src="../img/project/moviebot/genre1.png" class="img-responsive" width="300px"><img>
+                        </div>
+                        <div class="col-md-4 col-xs-4">
+                            <img src="../img/project/moviebot/genre2.png" class="img-responsive" width="300px"><img>
+                        </div>
+                        <div class="col-md-4 col-xs-4">
+                            <img src="../img/project/moviebot/genre3.png" class="img-responsive" width="300px"><img>
+                        </div>
+                    </div>
+                    <div class="col-md-1 col-xs-1">
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <p class="section-title">Problems</p>
+                <p class="article">I later figured out how to implement the bot on Watson's conversation API. The 'Genre Based' box was gone. A simple, 'Horror movie' would do it. I thought it was going well, until somedays later there was this particular case.</p>
+                <img src="../img/project/moviebot/tarantinoProblem.png" class="img-responsive">
+                <div class="img-div"></div>
+                <p class="article">One of my users wanted to watch a Tarantino movie. Well, my bot wasn't ready to understand or execute any of that. I figured that even if I didn't understand something, I won't throw out 'Help Desk' messages because they are annoying, so I kept on suggesting random movies. This definitely might have ticked him off. TLDR; My bot was sweared at.</p>
+                <div class="img-div"></div>
+                <img src="../img/project/moviebot/final.png" class="img-responsive" style="display:block; margin: auto;" width="300px">
+                <div class="img-div"></div>
+                <div class="img-div"></div>
+                <p class="article">I implemented 'People Based Search'. I had to add a ton of people as entities to train Watson on when to Search for people. The API returned top 3 movies after a search query. Error handling was the toughest part because the API wasn't too forgiving. If a random search term was passed, the API would fail and so did the code. After this, I had similar encounters where a user would ask for something my bot couldn't do and I would find out about another new feature to implement.
+                </p>
+                <img src="../img/project/moviebot/TarantinoSol.png" class="img-responsive">
+                <div class="divider"></div>
+                <p class="section-title">Features</p>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#myCarousel" data-slide-to="1"></li>
+                      <li data-target="#myCarousel" data-slide-to="2"></li>
+                      <li data-target="#myCarousel" data-slide-to="3"></li>
+                      <li data-target="#myCarousel" data-slide-to="4"></li>
+                    </ol>
 
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                      <div class="item active">
+                        <img src="http://media.breitbart.com/media/2017/10/RachelMcAdamsToback-640x480.jpg" style="width:100%;">
+                      </div>
+
+                      <div class="item">
+                        <img src="http://www.hawtcelebs.com/wp-content/uploads/2016/01/rachel-mcadams-at-critics-s-choice-awards-2016-in-santa-monica-01-17-2016_1.jpg" style="width:100%;">
+                      </div>
+
+                      <div class="item">
+                        <img src="http://www.myrachelmcadams.com/pic/20080905/rachel_mcadams_-_hollywood_film_festival_-_%2302/rachel_mcadams_hollywood_film_festival_02_20080905_23.jpg" style="width:100%;">
+                      </div>
+                      <div class="item">
+                        <img src="https://img1.southernliving.timeinc.net/sites/default/files/styles/4_3_horizontal_inbody_900x506/public/image/2015/12/main/2302801_beaut_mcdnote_ec028.jpg" style="width:100%;">
+                      </div>
+                      <div class="item">
+                        <img src="http://www.macleans.ca/wp-content/uploads/2008/09/rachel-mcadams.jpg" style="width:100%;">
+                      </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
                 <div class="divider"></div>
                 <p class="section-title">Try it out</p>
                 <p class="article">

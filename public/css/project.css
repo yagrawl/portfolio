@@ -92,6 +92,10 @@ p, ul, li, .article {
     height: 25px;
 }
 
+.img-div {
+    height: 10px;
+}
+
 .bot {
     margin-bottom: 100px;
 }
