@@ -398,6 +398,15 @@ span.links {
         margin: 20px auto;
     }
 }
+
+.research {
+    font-family: 'Proxima Nova';
+    font-size: 18px;
+    font-weight: 100;
+    color: #1F1F1F;
+    margin-left: 50px;
+    margin-right: 50px;
+}
 /* Footer
      span.social : font-awesome
      i : font-spacing for social

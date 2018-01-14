@@ -6,7 +6,7 @@
 
         <!-- SEO and mobile format declarations -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Resume Builder">
+        <meta name="description" content="Yash Agrawal | Project/Homograph Detector">
         <meta name="keywords" content="">
         <meta charset="UTF-8">
         <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
@@ -34,18 +34,46 @@
             </div>
             <img class="background img-responsive" src="../img/project/homograph/background.png">
             <div class="content">
-
+                <p class="section-title">Inspiration</p>
+                <p class="article">I was taking a database class in the Fall of 2017 and as part of the course I had to work in a group of 4 on a database related project.
+                    A team-member introduced me to the problems with IDN homographs. There was definitely a need for something like this. So what exactly is an IDN homograph?
+                    According to wikipedia, 'The internationalized domain name (IDN) homograph attack is a way a malicious party may deceive computer users about what remote
+                    system they are communicating with, by exploiting the fact that many different characters look alike, (i.e., they are homographs, hence the term for the attack).
+                    For example, a regular user of example.com may be lured to click a link where the Latin A is replaced with the Cyrillic A.' </br></br>
+                    Try this <a class="bottom anchor" href="https://xn--80ak6aa92e.com/" target="_blank">link</a> for example. Don't worry it is safe. In Google chrome today, it shows up in its original
+                    cyrillic form but try Firefox, it looks exactly like apple.com. It even has an SSL certificate. What happens if someone does that to chase.com, changes the a to cryllic, and recreates
+                    the frontend. The account information of an unaware user is comprised that easy. There has actually been an attack which was discovered in September of 2017 where hackers used a homograph of adobe.com
+                    to deliver betabot trojan.
+                </p>
+                <div class="divider"></div>
+                <p class="section-title">Setup</p>
+                <p class="article">Hopefully I have convinced you that this is a huge problem. Solution? Well, the browsers could start displaying Punycode. Chrome and Opera already do that. For the homographs that do exist which
+                might be accessed by browsers that don't have this functionality as of now, companies need to make sure that their domains aren't attacked. A database to list all the possible homographs of a url and check if it is already registered and that
+            is what we decided to build for this class.</p>
+                <div class="divider"></div>
+                <p class="section-title">Implementation</p>
+                <p class="article">We contacted versign to get the data for the existing .com TLDs. That was a 10 GB plus file. I wrote a parser that separated out all the cyrillic domains and the domains with commonly messed up letter combinations like rn -> m.
+                Since this class was a 4 month course and every person on the team had a full course load, we didn't aim too high. Just a simple search engine for existing homographs and ways to find their information. My main responsibility was the frontend and UI.
+                This was the finished product we came up with.</p>
+                <img class="screenshot img-responsive" src="../img/project/homograph/main.png" width="900px">
+                <p class="article">The landing screen had a big search bar in the middle to make it obvious what the purpose was and then it allowed to select the number of permutations of characters it wanted to allow because the list of possible homographs would be a huge amount
+                if all the other scripts were considered.</p>
+                <img class="screenshot img-responsive" src="../img/project/homograph/dets.png" width="900px">
+                <p class="article">After a domain is searched, apple.com here for example, the details about that domain are displayed. Number of possible homographs, which scripts it might have problems in, existance of multi letter homographs and problematic fonts for them and based on scripts, a list of risky TLDs.</p>
+                <img class="screenshot img-responsive" src="../img/project/homograph/list.png" width="900px">
+                <p class="article">Finally the list was displayed in a table form where each possible homograph was shown in its punycode, ASCII and unicode form. You could check the status to see if a domain was already registered and it would call our database and confirm.
+                My main contribution to this project was the UI and the frontend. In addition to that I also worked on the APIs and the parsers for sorting out the verisign data. This was a problem that I had never faced before but I do understand its impact and would love to work on this in the future.</p>
                 <div class="divider"></div>
                 <p class="section-title">Try it out</p>
                 <p class="article">
-                    <a class="anchor" target="_blank" href="#">Github</a></br>
+                    <a class="anchor" target="_blank" href="https://github.com/yagrawl/Homograph">Github</a></br>
                 </p>
                 <div class="divider"></div>
                 <p class="section-title">More Projects</p>
                 <p class="project-index">
                     <a class="anchor" href="/project/runistics">Runistics</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;
                     <a class="anchor" href="/project/leapflix">Leapflix</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;
-                    <a class="anchor" href="/project/homograph">IDN Homograph Detector</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;
+                    <a class="anchor" href="/project/broker">Broker</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;
                     <a class="anchor" href="/project/task">Task.</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;
                     <a class="anchor" href="/project/musify">Musify</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;
                     <a class="anchor" href="/project/moviebot">Moviebot</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;
