@@ -26,10 +26,11 @@ app.get('/work', (req, res) => {
 
 app.get('/project/:name', (req, res) => {
     var name = req.params.name;
-    try {
+    var projects = ['biophotonics', 'broker', 'homograph', 'leapflix', 'moviebot', 'musify', 'runistics', 'task', 'uichallenge'];
+    if(projects.includes(name)) {
         res.render('project/' + name, {});
     }
-    catch(err) {
+    else {
         res.render('404', {});
     }
 
