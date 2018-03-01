@@ -26,7 +26,13 @@ app.get('/work', (req, res) => {
 
 app.get('/project/:name', (req, res) => {
     var name = req.params.name;
-    res.render('project/' + name, {});
+    try {
+        res.render('project/' + name, {});
+    }
+    catch(err) {
+        res.render('404', {});
+    }
+
 });
 
 app.get('*', (req, res) => {
