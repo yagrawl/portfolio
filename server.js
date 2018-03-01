@@ -29,9 +29,9 @@ app.get('/project/:name', (req, res) => {
     res.render('project/' + name, {});
 });
 
-app.get('/.well-known/acme-challenge/14lGv8lEPiwHnW76i1o8PZSmjjHFx30PdbXRgYJ36ys', (req, res) => {
-    res.send('14lGv8lEPiwHnW76i1o8PZSmjjHFx30PdbXRgYJ36ys.MaGiXMpQ1GUptMbPN3Keep2W4Lg0sOY4QbxekyYrnP0');
-});
+app.get('/.well-known/acme-challenge/SpAdvOAEbIj_LZsVX8zGmR3_b1oLfLyuQgnwHyOCBaY', (req, res)=>{
+ res.send('SpAdvOAEbIj_LZsVX8zGmR3_b1oLfLyuQgnwHyOCBaY.MaGiXMpQ1GUptMbPN3Keep2W4Lg0sOY4QbxekyYrnP0');
+})
 
 app.get('*', (req, res) => {
     res.render('404', {});
