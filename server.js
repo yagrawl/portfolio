@@ -26,7 +26,7 @@ app.get('/work', (req, res) => {
 
 app.get('/project/:name', (req, res) => {
     var name = req.params.name;
-    var projects = ['biophotonics', 'broker', 'homograph', 'leapflix', 'moviebot', 'musify', 'runistics', 'task', 'uichallenge'];
+    var projects = ['biophotonics', 'broker', 'homograph', 'leapflix', 'moviebot', 'musify', 'runistics', 'task', 'uichallenge', 'encryptr'];
     if(projects.includes(name)) {
         res.render('project/' + name, {});
     }
