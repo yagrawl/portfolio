@@ -45,8 +45,26 @@
             </div>
             <img class="background img-responsive" src="../img/project/encryptr/background.png">
             <div class="content">
-                <p class="section-title">Inspiration</p>
-                <p class="article"></p>
+                <!-- <p class="section-title">Inspiration</p> -->
+                <p class="article">I was always fascinated by encryption and I wanted to know more about it so I decided to make a web application which
+                would allow encrytion and decryption with a key. It is written in node.js and uses ejs templating and css for frontend. Mostly, this was for me to review.</p>
+                <div class="divider"></div>
+                <p class="section-title">Research</p>
+                <p class="article">I read up on what really is required for encryption and how the blowfish algorithm works. So from what I understood, blowfish algorithm goes something like this:</p>
+                <p class="article">Basically it takes plain text and outputs a cipher text. It's a fast chipher because the length of its key can vary (till 448 bit in multiples of 32). At the outermost level of abstraction, blowfish looks something like this.</p>
+                <center><img src="../img/project/encryptr/1abstracted.png" class="img-responsive" width="400px"></center>
+                <p class="article">Diving a little bit deeper into the algorithm, I learnt more about how its round structure worked. We use 18 keys in blowfish. So the plain text of 64 bit is divided into two parts of 32 bits each. The left part X<sub>L</sub> will be XORed with the first key, and then the output is sent both towards the right side and down and then the output is again XORed with the right part X<sub>R</sub>. This keeps on trickling down and swapped till 16 keys and then the final two keys are processed without swapping. Then finally, they are combined again to return the cipher.</p>
+                <center><img src="../img/project/encryptr/blowfish.png" class="img-responsive" width="600px"></center>
+                <p class="article">So what exactly is F? Well, the 32 bit input is further divided into 4 parts of 8 bits each and treated the following way.</p>
+                <center><img src="../img/project/encryptr/3F.png" class="img-responsive" width="400px"></center>
+                <div class="divider"></div>
+                <p class="section-title">Design</p>
+                <p class="article">Initially I spent a few hours deciding what the web application would would look like. I used sketch to design the prototype. The design was fairly simple. The only purpose was to encrypt/decrypt so I tried to make it stand out. I just used #292929 and white color for the entire website to make it simplistic. This is what the design looked like.</p>
+                <img src="../img/project/encryptr/design.png" class="img-responsive screenshot">
+                <div class="divider"></div>
+                <p class="section-title">Implementation</p>
+                <p class="article">So I initially set up the node app and wrote the frontend and then instead of actually implementing the algorithm I used the crypto library for nodejs. I added some more functionality such as touch to copy and then just added some animation to text and here's how it looks and works as of now.</p>
+                <img src="../img/project/encryptr/demo.gif" class="img-responsive screenshot" width="900px">
                 <div class="divider"></div>
                 <p class="section-title">Try it out</p>
                 <p class="article">
@@ -62,6 +80,7 @@
                     <a class="anchor" href="/project/task">Task.</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;
                     <a class="anchor" href="/project/musify">Musify</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;
                     <a class="anchor" href="/project/moviebot">Moviebot</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;
+                    <a class="anchor" href="/project/broker">Broker</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;
                 </p>
                 <div class="bot"></div>
             </div>
