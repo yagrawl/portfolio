@@ -36,6 +36,10 @@ app.get('/project/:name', (req, res) => {
 
 });
 
+app.get('/.well-known/acme-challenge/jJLdQuQQ3F-3lM3AmBUw-AAV1ZrPJyGKolKxKBrSUu8', (req, res) => {
+    res.send('jJLdQuQQ3F-3lM3AmBUw-AAV1ZrPJyGKolKxKBrSUu8.MaGiXMpQ1GUptMbPN3Keep2W4Lg0sOY4QbxekyYrnP0');
+});
+
 app.get('*', (req, res) => {
     res.render('404', {});
 });
