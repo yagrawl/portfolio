@@ -20,9 +20,12 @@
 
         <script>
             var host = "www.yagrawal.com";
-            if ((host == location.host) && (location.protocol != "https:")){
+            var host2 = "yagrawal.com";
+            if ((host == location.hostname || host2 == location.hostname)
+                && (location.protocol != "https:")) {
                 location.protocol = "https";
             }
+            console.log(location.hostname)
         </script>
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
