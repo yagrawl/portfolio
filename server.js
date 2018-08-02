@@ -29,15 +29,13 @@ app.get('/project/:name', (req, res) => {
     var projects = ['biophotonics', 'broker', 'homograph', 'leapflix', 'moviebot', 'musify', 'runistics', 'task', 'uichallenge', 'encryptr'];
     if(projects.includes(name)) {
         res.render('project/' + name, {});
-    }
-    else {
+    } else {
         res.render('404', {});
     }
-
 });
 
-app.get('/.well-known/acme-challenge/jJLdQuQQ3F-3lM3AmBUw-AAV1ZrPJyGKolKxKBrSUu8', (req, res) => {
-    res.send('jJLdQuQQ3F-3lM3AmBUw-AAV1ZrPJyGKolKxKBrSUu8.MaGiXMpQ1GUptMbPN3Keep2W4Lg0sOY4QbxekyYrnP0');
+app.get('/.well-known/acme-challenge/G79JzlrEhyJJNnN0iE-rA2vYz56yXBX0Ft2OofrGbe8', (req, res) => {
+    res.send('G79JzlrEhyJJNnN0iE-rA2vYz56yXBX0Ft2OofrGbe8.MaGiXMpQ1GUptMbPN3Keep2W4Lg0sOY4QbxekyYrnP0');
 });
 
 app.get('*', (req, res) => {
